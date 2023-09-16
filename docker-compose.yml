@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongodb-tip:latest
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_USERNAME: phamquoc
+      MONGO_PASSWORD: phamquoc
+
+volumes:
+  mongodb_data:
